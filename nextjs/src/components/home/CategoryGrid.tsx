@@ -19,16 +19,16 @@ import {
 import { cn } from '@/lib/utils';
 
 const categories = [
-  { name: 'Alimentation', slug: 'grocery', icon: ShoppingBag, color: 'bg-emerald-500', count: 1420 },
-  { name: 'Électronique', slug: 'electronics-phones', icon: Laptop, color: 'bg-blue-500', count: 1250 },
-  { name: 'Véhicules', slug: 'vehicles', icon: Car, color: 'bg-green-500', count: 890 },
-  { name: 'Immobilier', slug: 'real-estate', icon: Home, color: 'bg-amber-500', count: 567 },
-  { name: 'Mode', slug: 'fashion-clothing', icon: Shirt, color: 'bg-pink-500', count: 2340 },
-  { name: 'Maison', slug: 'home-furniture', icon: Sofa, color: 'bg-orange-500', count: 780 },
-  { name: 'Sports', slug: 'sports-leisure', icon: Dumbbell, color: 'bg-purple-500', count: 450 },
-  { name: 'Emplois', slug: 'jobs', icon: Briefcase, color: 'bg-indigo-500', count: 320 },
-  { name: 'Beauté', slug: 'beauty', icon: Gem, color: 'bg-rose-500', count: 670 },
-  { name: 'Bijoux', slug: 'watches-jewelry', icon: Watch, color: 'bg-cyan-500', count: 290 },
+  { name: 'Alimentation', slug: 'grocery', icon: ShoppingBag, color: 'bg-emerald-500' },
+  { name: 'Électronique', slug: 'electronics-phones', icon: Laptop, color: 'bg-blue-500' },
+  { name: 'Véhicules', slug: 'vehicles', icon: Car, color: 'bg-green-500' },
+  { name: 'Immobilier', slug: 'real-estate', icon: Home, color: 'bg-amber-500' },
+  { name: 'Mode', slug: 'fashion-clothing', icon: Shirt, color: 'bg-pink-500' },
+  { name: 'Maison', slug: 'home-furniture', icon: Sofa, color: 'bg-orange-500' },
+  { name: 'Sports', slug: 'sports-leisure', icon: Dumbbell, color: 'bg-purple-500' },
+  { name: 'Emplois', slug: 'jobs', icon: Briefcase, color: 'bg-indigo-500' },
+  { name: 'Beauté', slug: 'beauty', icon: Gem, color: 'bg-rose-500' },
+  { name: 'Bijoux', slug: 'watches-jewelry', icon: Watch, color: 'bg-cyan-500' },
 ];
 
 export const CategoryGrid = () => {
@@ -74,7 +74,7 @@ export const CategoryGrid = () => {
                   <cat.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-black text-gray-900 mb-1 group-hover:text-white transition-colors">{cat.name}</h3>
-                <p className="text-[10px] uppercase font-black text-gray-400 group-hover:text-white/60 transition-colors tracking-widest">{cat.count.toLocaleString()} annonces</p>
+                <p className="text-[10px] uppercase font-black text-gray-400 group-hover:text-white/60 transition-colors tracking-widest italic">EXPLORER</p>
                 
                 {/* Decorative Pattern */}
                 <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-full translate-x-8 -translate-y-8 group-hover:bg-black/5 transition-colors" />

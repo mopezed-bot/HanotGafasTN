@@ -8,6 +8,7 @@
 
 [functions]
   node_bundler = "esbuild"
+  external_node_modules = ["styled-jsx"]
 
 [context.production.environment]
   NEXT_PUBLIC_SUPABASE_URL = "https://limghfdolwgimptrxpcr.supabase.co"
