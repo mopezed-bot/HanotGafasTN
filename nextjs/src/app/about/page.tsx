@@ -2,10 +2,20 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Star, Award, Users, Globe, Eye, Heart, ArrowRight, MapPin, Zap, ShieldCheck, Sparkles } from 'lucide-react';
+import { Suspense } from 'react';
+import { Star, Award, Users, Globe, Eye, Heart, ArrowRight, MapPin, Zap, ShieldCheck, Sparkles, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { cn } from '@/lib/utils';
 
 export default function AboutPage() {
+  return (
+    <Suspense fallback={null}>
+      <AboutContent />
+    </Suspense>
+  );
+}
+
+function AboutContent() {
   const stats = [
     { number: '10k+', label: 'Annonces Active', color: 'text-primary' },
     { number: '5k+', label: 'Membres à Gafsa', color: 'text-amber-600' },
