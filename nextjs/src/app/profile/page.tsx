@@ -87,7 +87,7 @@ export default function ProfilePage() {
   const handleSaveSettings = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user) return;
-    const { data, error } = await supabase.from('profiles').update({ ...settingsForm, updated_at: new Date().toISOString() }).eq('id', user.id).select('*').single();
+    const { data, error } = await supabase.from('profiles').update({ ...settingsForm, id: user.id, updated_at: new Date().toISOString() }).eq('id', user.id).select('*').single();
     if (error) return alert('Erreur: ' + error.message);
     setProfile(data);
     alert('Paramètres mis à jour');
@@ -170,7 +170,7 @@ export default function ProfilePage() {
                 </div>
                 <span className="text-[10px] font-black text-emerald-600 tracking-widest">+12%</span>
               </div>
-              <p className="text-3xl font-black text-gray-900 tracking-tighter">1,240 <span className="text-sm">DT</span></p>
+              <p className="text-3xl font-black text-gray-900 tracking-tighter">{orders.reduce((acc, o) => acc + (o.total_amount || 0), 0).toLocaleString()} <span className="text-sm">DT</span></p>
               <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-1">Ventes Totales</p>
            </div>
            <div className="glass p-8 rounded-[2.5rem] border-primary/5">

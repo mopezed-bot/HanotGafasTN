@@ -66,7 +66,7 @@ export const Hero = () => {
                 ))}
               </div>
               <p className="text-sm font-bold text-gray-500">
-                <span className="text-primary">+1,200</span> utilisateurs actifs à Gafsa
+                <span className="text-primary italic">HannaShop</span> arrive à Gafsa
               </p>
             </div>
           </motion.div>
@@ -113,8 +113,8 @@ export const Hero = () => {
                   </div>
                   <span className="text-xs font-bold text-gray-500">Popularité</span>
                 </div>
-                <p className="text-xl font-black">+45%</p>
-                <p className="text-[10px] text-gray-400">Croissance cette semaine</p>
+                <p className="text-xl font-black">Lancement</p>
+                <p className="text-[10px] text-gray-400">Ouvert à tous</p>
               </motion.div>
 
               <motion.div 
@@ -128,7 +128,7 @@ export const Hero = () => {
                   </div>
                   <span className="text-xs font-bold text-gray-500">Ventes</span>
                 </div>
-                <p className="text-xl font-black">250+</p>
+                <p className="text-xl font-black">Qualité</p>
                 <p className="text-[10px] text-gray-400">Annonces vérifiées</p>
               </motion.div>
             </div>
