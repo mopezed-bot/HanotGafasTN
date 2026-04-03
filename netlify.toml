@@ -11,4 +11,4 @@
 
 [context.production.environment]
   NEXT_PUBLIC_SUPABASE_URL = "https://limghfdolwgimptrxpcr.supabase.co"
-  NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxpbWdoZmRvbHdndW1wdHJ4cGNyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDY3NDksImV4cCI6MjA5MDc4Mjc0OX0.cB78mEWaeW_wb7IRkkxdMXB9ViBlLZKNJLTkdPAI-5Q"
+  NEXT_PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_aG5g0hLBTHjFN40xHVRKBg_roPgXy6L"
