@@ -1,14 +1,13 @@
 [build]
-  base = "nextjs"
-  command = "npm run build"
-  publish = ".next"
+  command = "cd nextjs && npm install && npm run build"
+  publish = "nextjs/.next"
   environment = { NEXT_TELEMETRY_DISABLED = "1" }
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [functions]
   node_bundler = "esbuild"
-
-[settings]
-  python_version = "3.11"
 
 [context.production.environment]
   NEXT_PUBLIC_SUPABASE_URL = "https://limghfdolwdgimptrxpcr.supabase.co"
