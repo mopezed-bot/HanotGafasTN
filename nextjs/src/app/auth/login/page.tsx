@@ -63,7 +63,7 @@ export default function LoginPage() {
               Bon Retour <span className="text-primary italic">!</span>
             </h1>
             <p className="text-gray-500 font-bold">
-              Connectez-vous à votre espace <span className="text-primary italic">HanoutTN</span>.
+              Connectez-vous à votre espace <span className="text-primary italic">HannaShop</span>.
             </p>
           </div>
 

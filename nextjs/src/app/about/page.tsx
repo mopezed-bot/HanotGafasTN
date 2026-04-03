@@ -48,7 +48,7 @@ function AboutContent() {
             <span className="text-primary italic">Bassin Minier .</span>
           </h1>
           <p className="text-xl text-gray-500 font-bold max-w-2xl mx-auto leading-relaxed italic">
-            "Plus qu'un marketplace, HanoutTN est le cœur battant du commerce local à Moulares et Redeyef."
+            "Plus qu'un marketplace, HannaShop est le cœur battant du commerce local à Moulares et Redeyef."
           </p>
         </div>
       </section>
@@ -89,15 +89,15 @@ function AboutContent() {
           >
             <div className="space-y-4">
                <h2 className="text-4xl font-black text-gray-900 tracking-tighter leading-none">
-                 Pourquoi <span className="text-primary italic">HanoutTN ?</span>
+                 Rejoignez <span className="text-primary italic">HannaShop</span>
                </h2>
                <div className="w-20 h-1.5 bg-primary rounded-full" />
             </div>
             <p className="text-lg text-gray-600 font-bold leading-relaxed">
-              Fondé en 2024, HanoutTN est né d'une vision simple : transformer la façon dont les habitants du bassin minier (Gafsa, Moulares, Redeyef) achètent et vendent. 
+              Fondé en 2024, HannaShop est né d'une vision simple : transformer la façon dont les habitants du bassin minier (Gafsa, Moulares, Redeyef) achètent et vendent. 
             </p>
             <p className="text-gray-500 font-medium leading-relaxed">
-              Dans une région riche en talent et en opportunités, nous avons créé un pont numérique sécurisé. Que vous soyez un artisan local, une boutique établie, ou un particulier souhaitant donner une seconde vie à ses objets, HanoutTN est votre espace. 
+              Dans une région riche en talent et en opportunités, nous avons créé un pont numérique sécurisé. Que vous soyez un artisan local, une boutique établie, ou un particulier souhaitant donner une seconde vie à ses objets, HannaShop est votre espace. 
               Pas de complications, juste du commerce de proximité, rapide et fiable.
             </p>
             

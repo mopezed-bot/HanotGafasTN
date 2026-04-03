@@ -81,7 +81,7 @@ export const Header = ({ user }: { user: any }) => {
             </div>
             <div className="hidden sm:block">
               <span className={cn("text-2xl font-black tracking-tighter", isScrolled ? "text-gray-900" : "text-gray-900")}>
-                Hanout<span className="text-primary italic">TN</span>
+                Hanna<span className="text-primary italic">Shop</span>
               </span>
             </div>
           </Link>

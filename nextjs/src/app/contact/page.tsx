@@ -54,7 +54,7 @@ export default function ContactPage() {
             <span className="text-primary italic">Projet .</span>
           </h1>
           <p className="text-xl text-gray-500 font-bold max-w-2xl mx-auto leading-relaxed italic">
-            "Une question sur HanoutTN ? Notre équipe basée à Gafsa est là pour vous aider."
+            "Une question sur HannaShop ? Notre équipe basée à Gafsa est là pour vous aider."
           </p>
         </section>
 
@@ -77,7 +77,7 @@ export default function ContactPage() {
                {[
                  { icon: MapPin, title: "Siège Social", content: "Avenue Habib Bourguiba, Moulares, Gafsa, Tunisie", color: "text-amber-600" },
                  { icon: Phone, title: "Téléphone", content: "+216 76 000 000\n+216 12 345 678", color: "text-emerald-600" },
-                 { icon: Mail, title: "Email Support", content: "support@hanouttn.tn\ncontact@hanouttn.tn", color: "text-blue-600" },
+                 { icon: Mail, title: "Email Support", content: "support@HannaShop.tn\ncontact@HannaShop.tn", color: "text-blue-600" },
                  { icon: Clock, title: "Heures d'Ouverture", content: "Lun - Sam: 09:00 - 19:00\nDimanche: Fermé", color: "text-primary" }
                ].map((item, i) => (
                  <div key={i} className="glass p-8 rounded-[2.5rem] border-primary/5 hover:border-primary/20 transition-all group">
@@ -138,7 +138,7 @@ export default function ContactPage() {
                      </div>
                      <h3 className="text-2xl font-black text-gray-900 mb-4 tracking-tighter">Message Envoyé !</h3>
                      <p className="text-gray-500 font-bold italic mb-10 leading-relaxed">
-                       "Merci de nous avoir contactés. Notre équipe vous répondra dans les plus brefs délais."
+                       Dans une région riche en talent et en opportunités, nous avons créé un pont numérique sécurisé. Que vous soyez un artisan local, une boutique établie, ou un particulier souhaitant donner une seconde vie à ses objets, HannaShop est votre espace.
                      </p>
                      <Button onClick={() => setIsSubmitted(false)} variant="glass" className="rounded-2xl px-10">NOUVEAU MESSAGE</Button>
                    </motion.div>
@@ -191,7 +191,7 @@ export default function ContactPage() {
                             <option value="">Choisir un sujet</option>
                             <option value="order">Ma Commande</option>
                             <option value="product">Question Produit</option>
-                            <option value="listing">Vendre sur HanoutTN</option>
+                            <option value="listing">Vendre sur HannaShop</option>
                             <option value="other">Autre</option>
                           </select>
                         </div>

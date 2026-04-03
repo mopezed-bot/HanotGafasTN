@@ -32,7 +32,7 @@ export const Footer = () => {
               </div>
               <div>
                 <span className="text-3xl font-black tracking-tighter">
-                  Hanout<span className="text-primary italic">TN</span>
+                  Hanna<span className="text-primary italic">Shop</span>
                 </span>
                 <p className="text-[10px] uppercase font-black text-gray-500 tracking-widest mt-0.5">Vibe Local, Impact National</p>
               </div>
@@ -94,7 +94,7 @@ export const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm font-black text-white">Email Support</p>
-                  <p className="text-xs text-gray-500">contact@hanouttn.tn</p>
+                  <p className="text-xs text-gray-500">contact@hannashop.tn</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -112,7 +112,7 @@ export const Footer = () => {
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-gray-500 text-sm font-medium">
-            © 2024 HanoutTN. Fièrement conçu pour la Tunisie.
+            © 2024 HannaShop. Fièrement conçu pour la Tunisie.
           </p>
           <div className="flex items-center gap-8">
             <Link href="#" className="text-gray-500 hover:text-white text-xs font-black uppercase tracking-widest transition-colors">Confidentialité</Link>

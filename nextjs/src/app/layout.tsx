@@ -6,22 +6,22 @@ import './globals.css';
 const cairo = Cairo({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 
 export const metadata: Metadata = {
-  title: 'HanoutTN - Le Marketplace du Bassin Minier',
+  title: 'HannaShop - Le Marketplace du Bassin Minier',
   description:
     'Achetez and vendez localement à Gafsa, Moulares, Redeyef et Metlaoui. Rapide, simple et sécurisé.',
-  keywords: ['tunisie', 'gafsa', 'moulares', 'redeyef', 'metlaoui', 'marketplace', 'hanout', 'e-commerce'],
-  authors: [{ name: 'HanoutTN' }],
+  keywords: ['tunisie', 'gafsa', 'moulares', 'redeyef', 'metlaoui', 'marketplace', 'hannashop', 'e-commerce'],
+  authors: [{ name: 'HannaShop' }],
   openGraph: {
-    title: 'HanoutTN - Marketplace local Gafsa',
+    title: 'HannaShop - Marketplace local Gafsa',
     description: 'Le futur du commerce local dans le bassin minier tunisien.',
-    url: 'https://hanouttn.tn',
-    siteName: 'HanoutTN',
+    url: 'https://hannashop.netlify.app',
+    siteName: 'HannaShop',
     locale: 'fr_TN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'HanoutTN - Marketplace local Gafsa',
+    title: 'HannaShop - Marketplace local Gafsa',
     description: 'Achetez et vendez facilement dans le bassin minier.',
   },
 };

@@ -74,7 +74,7 @@ export default function SignupPage() {
           
           <div className="relative z-10 text-center mb-10">
             <h1 className="text-4xl font-black text-gray-900 tracking-tighter leading-none mb-4">
-              Rejoignez <span className="text-primary italic">HanoutTN</span>
+              Rejoignez <span className="text-primary italic">HannaShop</span>
             </h1>
             <p className="text-gray-500 font-bold">
               Le futur du commerce local à <span className="text-primary italic">Gafsa</span>.
