@@ -39,6 +39,7 @@ export default function ProfilePage() {
   const [orders, setOrders] = useState<any[]>([]);
   const [favorites, setFavorites] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isDeleting, setIsDeleting] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState('listings');
   const [settingsForm, setSettingsForm] = useState({
     full_name: '',
@@ -95,9 +96,16 @@ export default function ProfilePage() {
 
   const handleDeleteListing = async (listingId: string) => {
     if (!confirm('Voulez-vous vraiment supprimer cette annonce ?')) return;
-    const { error } = await deleteListing(listingId);
-    if (error) return alert('Erreur: ' + error.message);
-    setListings(listings.filter(l => l.id !== listingId));
+    setIsDeleting(listingId);
+    try {
+      const { error } = await deleteListing(listingId);
+      if (error) throw error;
+      setListings(prev => prev.filter(l => l.id !== listingId));
+    } catch (error: any) {
+      alert('Erreur lors de la suppression: ' + error.message);
+    } finally {
+      setIsDeleting(null);
+    }
   };
 
   if (isLoading) {
@@ -259,9 +267,15 @@ export default function ProfilePage() {
                                <h3 className="font-black text-gray-900 line-clamp-1 mb-1">{l.title}</h3>
                                <p className="text-xl font-black text-primary tracking-tighter mb-4">{l.price} DT</p>
                                <div className="flex gap-2">
-                                  <Link href={`/listings/${l.id}`} className="w-10 h-10 glass rounded-xl flex items-center justify-center hover:bg-white transition-colors"><Eye className="w-4 h-4" /></Link>
-                                  <button onClick={() => handleDeleteListing(l.id)} className="w-10 h-10 glass rounded-xl flex items-center justify-center hover:bg-red-50 hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4" /></button>
-                               </div>
+                                   <Link href={`/listings/${l.id}`} className="w-10 h-10 glass rounded-xl flex items-center justify-center hover:bg-white transition-colors"><Eye className="w-4 h-4" /></Link>
+                                   <button 
+                                    onClick={() => handleDeleteListing(l.id)} 
+                                    disabled={isDeleting === l.id}
+                                    className="w-10 h-10 glass rounded-xl flex items-center justify-center hover:bg-red-50 hover:text-red-500 transition-colors disabled:opacity-50"
+                                   >
+                                      {isDeleting === l.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+                                   </button>
+                                </div>
                             </div>
                           </div>
                         ))}

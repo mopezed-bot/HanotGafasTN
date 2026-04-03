@@ -327,13 +327,15 @@ export default function ListingDetailPage() {
 
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-               <Button 
-                onClick={() => router.push('/checkout?listing=' + listing.id)}
-                className="flex-1 h-20 rounded-[2rem] text-2xl group shadow-2xl shadow-primary/30"
+               <a 
+                href={`https://wa.me/${(listing.phone_number || '').replace(/\s+/g, '')}?text=${encodeURIComponent(`Bonjour, je suis intéressé par votre annonce "${listing.title}" sur HannaShop`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 h-20 rounded-[2rem] text-2xl group shadow-2xl shadow-emerald-500/30 bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center font-black transition-all"
                >
-                 <ShoppingBag className="mr-3 w-6 h-6" />
-                 ACHETER MAINTENANT
-               </Button>
+                 <MessageCircle className="mr-3 w-8 h-8" />
+                 DISCUTER SUR WHATSAPP
+               </a>
                {user?.id !== listing.seller_id && (
                  <div className="flex gap-4">
                     <Button 

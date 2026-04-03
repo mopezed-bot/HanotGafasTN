@@ -83,6 +83,7 @@ export interface Listing {
   is_active: boolean;
   is_sold: boolean;
   view_count: number;
+  phone_number: string | null;  // NEW: Store seller phone number
   created_at: string;
   updated_at: string;
   expires_at: string | null;
@@ -93,6 +94,7 @@ export interface ListingWithSeller extends Listing {
   seller_full_name: string | null;
   seller_avatar: string | null;
   seller_phone: string | null;  // NEW: For WhatsApp contact
+  seller_created_at: string | null; // NEW: For member tenure
   category_name: string | null;
   category_slug: string | null;
   distance_meters: number | null;
@@ -109,6 +111,7 @@ export interface ListingInsert {
   images?: string[];
   location?: string;
   address?: string;
+  phone_number?: string; // NEW: Mandatory seller contact
   is_active?: boolean;
   expires_at?: string;
 }
@@ -123,6 +126,7 @@ export interface ListingUpdate {
   images?: string[];
   location?: string;
   address?: string;
+  phone_number?: string;
   is_active?: boolean;
   is_sold?: boolean;
   updated_at?: string;

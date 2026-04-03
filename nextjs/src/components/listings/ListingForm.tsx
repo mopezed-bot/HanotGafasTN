@@ -55,6 +55,7 @@ export default function ListingForm({ userId, onSuccess }: ListingFormProps) {
   const [imagePreviews, setImagePreviews] = useState<string[]>([]);
   const [address, setAddress] = useState('Moulares, Gafsa');
   const [location, setLocation] = useState<GeoPoint | null>(MAIN_PLACES[0].location);
+  const [phoneNumber, setPhoneNumber] = useState('');
 
   const [categories, setCategories] = useState<Category[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -66,6 +67,7 @@ export default function ListingForm({ userId, onSuccess }: ListingFormProps) {
     !!price && parseFloat(price) > 0,
     !!categoryId,
     address.trim().length > 2,
+    phoneNumber.trim().length > 7,
   ];
   const completion = Math.round((completionSteps.filter(Boolean).length / completionSteps.length) * 100);
 
@@ -113,6 +115,7 @@ export default function ListingForm({ userId, onSuccess }: ListingFormProps) {
     try {
       if (!title.trim()) throw new Error('Le titre est requis');
       if (!price || parseFloat(price) <= 0) throw new Error('Un prix valide est requis');
+      if (!phoneNumber.trim()) throw new Error('Un numéro de téléphone est requis');
       if (images.length === 0) throw new Error('Au moins une image est requise');
 
       let sellerId = userId;
@@ -136,6 +139,7 @@ export default function ListingForm({ userId, onSuccess }: ListingFormProps) {
           category_id: categoryId || undefined,
           location: location ? `POINT(${location.lng} ${location.lat})` : undefined,
           address: address.trim() || undefined,
+          phone_number: phoneNumber.trim(),
         },
         images
       );
@@ -308,6 +312,19 @@ export default function ListingForm({ userId, onSuccess }: ListingFormProps) {
                     ))}
                   </select>
                </div>
+            </div>
+
+            <div className="space-y-2">
+               <label className="text-[10px] uppercase font-black text-gray-400 tracking-widest ml-1">Numéro de Téléphone (WhatsApp) <span className="text-red-500">*</span></label>
+               <input
+                type="tel"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                placeholder="Ex: 55 123 456"
+                required
+                className="w-full bg-white/50 border-2 border-transparent focus:border-primary rounded-2xl p-4 text-sm font-bold focus:outline-none transition-all"
+              />
+              <p className="text-[10px] text-gray-400 font-bold italic ml-1">Les acheteurs pourront vous contacter directement sur WhatsApp.</p>
             </div>
           </div>
         </div>
